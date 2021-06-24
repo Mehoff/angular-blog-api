@@ -50,6 +50,14 @@ async function postComment(id, name, text){
     }
 }
 
+function getNextArticleId(){
+    const article = db.data.articles.reduce((prev, current) => {
+        return (parseInt(prev.id) > parseInt(current.id)) ? prev : current
+    })
+    
+    return parseInt(article.id) + 1;
+}
+
 
 app.get('/users', (req, res) => {
     res.status(200).send('users');
@@ -65,6 +73,10 @@ app.get('/articles:id', (req, res) => {
 
 app.get('/articles', (req, res) => {
     res.status(200).send(getArticles());
+})
+
+app.get('/next-article-id', (req, res) => {
+    res.status(200).send({id: getNextArticleId()});
 })
 
 app.put('/post-comment', async (req, res) => {
