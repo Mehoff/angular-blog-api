@@ -37,10 +37,18 @@ function getArticleComments(id){
     return db.data.articles[id].comments;
 }
 
-//getArticleComments(1)
-//getArticles();
-
-
+async function postComment(id, name, text){
+    try{
+        let article = db.data.articles.find(article => article.id == id);
+        article.comments.push({name, text})
+        await db.write()
+        return article;
+    }
+    catch(err){
+        console.log(`<!>ERROR:\n ${err}`)
+        return {error: err}
+    }
+}
 
 
 app.get('/users', (req, res) => {
@@ -59,8 +67,13 @@ app.get('/articles', (req, res) => {
     res.status(200).send(getArticles());
 })
 
-app.put('/post-comment', (req, res) => {
-    let result = postComment(req.body.id, req.body.comment);
+app.put('/post-comment', async (req, res) => {
+    let result = await postComment(req.body.id, req.body.name, req.body.text);
+    console.log(result);
+    if(result.err){
+        res.status(400).send(result.err);
+    }
+    res.status(200).send(result);
 })
 
 
