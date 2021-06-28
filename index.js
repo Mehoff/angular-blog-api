@@ -21,7 +21,6 @@ await db.read();
 
 
 function getArticles(){
-    
     try{
         const {articles} = db.data;
         console.log('getArticles()');
@@ -30,12 +29,23 @@ function getArticles(){
     catch(err){
         console.log(err)
     }
-    
 }
 
-function getArticleComments(id){
-    return db.data.articles[id].comments;
+async function postArtcle(article){
+    try{
+        let nextArticleId = getNextArticleId();
+        article.id = nextArticleId;
+        article.comments = [];
+        db.data.articles.push(article);
+        await db.write();
+        return article;
+    }
+    catch(err){
+        console.log(`<!>ERROR: (postArticle) \n ${err}`)
+        return {error: err}
+    }
 }
+
 
 async function postComment(id, name, text){
     try{
@@ -84,6 +94,15 @@ app.put('/post-comment', async (req, res) => {
     console.log(result);
     if(result.err){
         res.status(400).send(result.err);
+    }
+    res.status(200).send(result);
+})
+
+app.put('/post-article', async (req,res) => {
+    let result = await postArtcle(req.body);
+    console.log(result);
+    if(result.error){
+        res.status(400).send(result.err)
     }
     res.status(200).send(result);
 })
