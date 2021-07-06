@@ -28,7 +28,7 @@
     {
       "id": 2,
       "title": "УХ-ТЫ, Зелёные слоны!",
-      "subtitle": "Казалось бы... причем тут легалайз...",
+      "subtitle": "Казалось бы...",
       "text": "Зеленый Слон дул из хобота, чтобы разбудить спящего главного героя, но он закрыл слону хобот будильником, чтобы он не дул. Увидев Чрчела, Слон вместе со всеми уходит, но Чучел остаётся. Представляет из себя слона зелёного цвета. Имеет маленькие уши, и глаза без зрачков.",
       "date": "02.03.2021",
       "images": [
@@ -70,52 +70,30 @@
     {
       "title": "Заголовок",
       "subtitle": "Подзаголовок",
-      "text": "Text, Text, Text,Text,Text,Text,",
-      "date": "1 624 874 693 473",
+      "text": "Мужичок улыбывается, смотреть всем!",
+      "date": "Jul 6, 2021, 01:20 PM",
       "images": [
-        "https://ianimal.ru/wp-content/uploads/2011/01/vodyanue-glazki01.jpg",
-        "https://ianimal.ru/wp-content/uploads/2011/01/vodyanue-glazki01.jpg",
-        "https://ianimal.ru/wp-content/uploads/2011/01/vodyanue-glazki01.jpg"
+        "https://ak.picdn.net/shutterstock/videos/14867809/thumb/2.jpg"
       ],
-      "id": 4
+      "id": 4,
+      "comments": []
     },
     {
-      "title": "asdasdsad",
-      "subtitle": "asdasdasd",
-      "text": "asdasdasd",
-      "date": "1624874764814",
+      "title": "Два парня кайфуют",
+      "subtitle": "Улыбаются, позитивные",
+      "text": "The grid-row CSS shorthand property specifies a grid item's size and location within the grid row by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its grid area",
+      "date": "Jul 6, 2021, 02:01 PM",
       "images": [
-        "https://ianimal.ru/wp-content/uploads/2011/01/vodyanue-glazki01.jpg",
-        "https://ianimal.ru/wp-content/uploads/2011/01/vodyanue-glazki01.jpg"
+        "https://ak.picdn.net/shutterstock/videos/14867809/thumb/2.jpg",
+        "https://ak.picdn.net/shutterstock/videos/14867809/thumb/2.jpg"
       ],
-      "id": 5
-    },
-    {
-      "title": "Заголовок",
-      "subtitle": "Подзаголовок",
-      "text": "asdasdasdadasd",
-      "date": "28-06-2021 01:11",
-      "images": [
-        "https://upload.wikimedia.org/wikipedia/commons/b/ba/MPEG_Transport_Stream_HL.svg"
-      ],
+      "id": 5,
       "comments": [
         {
-          "name": "Serega",
-          "text": "xd"
+          "name": "Матвей",
+          "text": "Красивые парни, мощные"
         }
-      ],
-      "id": 6
-    },
-    {
-      "title": "Форматы даты в Angular 2",
-      "subtitle": "Разбор всех самых популярных форматов",
-      "text": "'short': equivalent to 'M/d/yy, h:mm a' (6/15/15, 9:03 AM).\n'medium': equivalent to 'MMM d, y, h:mm:ss a' (Jun 15, 2015, 9:03:01 AM).\n'long': equivalent to 'MMMM d, y, h:mm:ss a z' (June 15, 2015 at 9:03:01 AM GMT+1).\n'full': equivalent to 'EEEE, MMMM d, y, h:mm:ss a zzzz' (Monday, June 15, 2015 at 9:03:01 AM GMT+01:00).\n'shortDate': equivalent to 'M/d/yy' (6/15/15).\n'mediumDate': equivalent to 'MMM d, y' (Jun 15, 2015).\n'longDate': equivalent to 'MMMM d, y' (June 15, 2015).\n'fullDate': equivalent to 'EEEE, MMMM d, y' (Monday, June 15, 2015).\n'shortTime': equivalent to 'h:mm a' (9:03 AM).\n'mediumTime': equivalent to 'h:mm:ss a' (9:03:01 AM).\n'longTime': equivalent to 'h:mm:ss a z' (9:03:01 AM GMT+1).\n'fullTime': equivalent to 'h:mm:ss a zzzz' (9:03:01 AM GMT+01:00).",
-      "date": "Jun 28, 2021, 01:18 PM",
-      "images": [
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/1280px-AngularJS_logo.svg.png"
-      ],
-      "id": 7,
-      "comments": []
+      ]
     }
   ]
 }

@@ -31,6 +31,18 @@ function getArticles(){
     }
 }
 
+function getArticle(id){
+    
+    try{
+        const article = db.data.articles.find(article => article.id == id);
+        console.log(`getArticle(${id})`);
+        return article;
+    }
+    catch(err){
+        console.log(err);
+    }
+}
+
 async function postArtcle(article){
     try{
         let nextArticleId = getNextArticleId();
@@ -74,9 +86,19 @@ app.get('/users', (req, res) => {
 })
 
 app.get('/articles:id', (req, res) => {
+    console.log('get article')
     let article = getArticle(req.body.id);
     if(!article){
-        res.status(404).send({error: `Can\`t get article with id: ${req.body.id}`})
+        res.status(400).send({error: `Can\`t get article with id: ${req.body.id}`})
+    }
+    res.status(200).send(article);
+})
+
+app.get('/lastArticle', (req, res) => {
+    const lastArticleId = getNextArticleId() - 1;
+    let article = getArticle(lastArticleId);
+    if(!article){
+        res.status(400).send({error: `Can\`t get article with id: ${lastArticleId}`})
     }
     res.status(200).send(article);
 })
